@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #conteudo{
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            background-color: aquamarine;
+        }
+    </style>
+    <title>Mudando de cor</title>
+</head>
+<body>
+    <div id="conteudo" onclick="mudar()"></div>
+    <script>
+        var corpo = document.querySelector("#conteudo");
+
+        function mudar(){
+            var goColor = geraHexa()
+
+            corpo.style.backgroundColor = goColor;
+
+            
+        }
+
+        function geraHexa(){
+            var hex = "0123456789ABCDEF"
+            var cor = "#"
+
+            for(v=1;v<=6;v++){
+                cor += hex [Math.floor(Math.random()*16)]
+            } return cor
+
+
+        }
+      
+    </script>
+</body>
+</html>
